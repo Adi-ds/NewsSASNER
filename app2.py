@@ -18,7 +18,7 @@ sentiment_reason = "The sentiment of the text is positive because it focuses on 
 
 
 link_0 = [company_type, headline, news, entities, summary, aspects, sentiment, sentiment_reason]
-analysis_order = ['company_type', 'headline', 'news', 'entities', 'summary', 'aspects', 'sentiment', 'sentiment_reason']
+analysis_order = ['Company_Type', 'Headline', 'News', 'Entities', 'Summary', 'Aspects', 'Sentiment', 'Sentiment_reason']
 
 def make_entities_dict(entities):
     entities_dict = {}
@@ -38,9 +38,9 @@ def make_aspect_dict(aspects):
 
 analysis = {}
 for element,key_name in zip(link_0,analysis_order):
-    if key_name == 'entities':
+    if key_name == 'Entities':
         analysis[key_name]=make_entities_dict(element)
-    elif key_name == 'aspects':
+    elif key_name == 'Aspects':
         analysis[key_name]=make_aspect_dict(aspects)
     else:
         analysis[key_name]=element
